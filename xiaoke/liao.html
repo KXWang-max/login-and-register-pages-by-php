@@ -1,0 +1,49 @@
+﻿<html>
+<form action="sendmes.php" method="POST">
+<a href='action.php'>查看发言记录</a>
+ <head>
+  <title>聊天室</title>
+  <meta charset="utf-8"/>
+  <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
+
+ </head>
+ <body>  
+   <h3 class="panel-title">
+    聊天室
+    </h3>
+   <div class="panel-body ">
+    <div class="well no-bottom ">
+      
+     <div id="msg" class="showmessage">
+     </div>
+    
+     <div class="well" >
+      <form role="form">
+       <div class="form-group">
+        <label for="name">发送消息</label>
+        <p><textarea class="form-control" id="content" name="content" style="resize: none;font-family: Microsoft YaHei;" rows="3" >
+        </textarea></p>
+       </div>
+       <div style="text-align: right">
+        <button type="button" class="btn btn-primary" onclick="send()">
+         <span class="glyphicon glyphicon-envelope"></span>
+		<p><input type="submit" name="submit" value="发送"></p>
+        </button>
+       </div>
+
+      </form>
+    
+ 
+    </div>
+   </div>
+  </div>
+     时间：   
+<div id="time">    
+<script>    
+setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();",1000); 
+
+</script>    
+</div>
+ </body>
+</form>
+</html>
